@@ -1,0 +1,61 @@
+<resources>
+    <!--Global-->
+    <string name="app_name">WeatherViewer</string>
+    <string name="google_maps_key">AIzaSyBNfD9aq8YPqLw09MRVK16X7XYFsaD2OiY</string>
+
+    <!--Main screen-->
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="weather_forecast">Weather forecast</string>
+    <string name="chosen_city">Chosen location</string>
+    <string name="choose_location">Choose location</string>
+    <string name="week_weather">Weather for week</string>
+    <string name="today_weather">Weather today</string>
+    <string name="main_name">Weather Forecast</string>
+
+    <!--Today Weather screen-->
+    <string name="today">Today is %s</string>
+    <string name="low_s">Low: %s C</string>
+    <string name="max_s">Max: %s C</string>
+    <string name="humidity_s">Humidity: %s</string>
+    <string name="weather_logo">weather logo</string>
+    <string name="temperature">Temperature</string>
+    <string name="temp_s_c">Temperature: %s C</string>
+    <string name="min_s_c">Min: %s C</string>
+    <string name="max_s_c">Max: %s C</string>
+    <string name="humidity">Humidity</string>
+    <string name="wind">Wind</string>
+    <string name="sunrise_s">Sunrise: \n%s</string>
+    <string name="sunset_s">Sunset: \n%s</string>
+    <string name="wind_speed_s">Wind speed: %s m/s</string>
+    <string name="have_a_nice_day">Have a nice day :)</string>
+    <string name="city_s">City: %s</string>
+    <string name="city">City</string>
+
+    <!--Location screen-->
+    <string name="search">Search</string>
+    <string name="current_location">Use current location</string>
+    <string name="show_weather_for_chosen_city">show weather for chosen city</string>
+    <string name="location_text">Location</string>
+    <string name="btn_search">Search</string>
+    <string name="text_current_location">Use current location</string>
+    <string name="message_need_permission">Allow GymBud to access your location for recommendation person near you</string>
+    <string name="answer_grant">Allow</string>
+    <string name="answer_deny">Deny</string>
+    <string name="message_path_to_permissions">Go to permissions</string>
+    <string name="message_no_permission">Without permission of access location can\'t get current location. Please use search</string>
+    <string name="permissions_are_denied">Permissions are denied</string>
+    <string name="setting">Settings</string>
+    <string name="save_text">Save</string>
+    <string name="message_not_connected">Not connected...</string>
+    <string name="message_failed_connection">Failed to connect...</string>
+    <string name="message_suspended_connection">Connection suspended...</string>
+    <string name="message_no_known_location">Can\'t determine the location</string>
+    <string name="message_advice">Please use search for identification location</string>
+    <string name="validation_city">The city isn\'t defined</string>
+    <string name="validation_country">The country isn\'t defined</string>
+    <string name="enter_the_city">Enter the city (or use your current location) for defining the weather</string>
+
+    <!--Week weather screen-->
+
+</resources>

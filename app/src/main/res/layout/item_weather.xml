@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_6"
+    app:cardCornerRadius="@dimen/margin_6"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:id="@+id/iv_Weather"
+            android:layout_width="@dimen/logo_size_120"
+            android:layout_height="@dimen/logo_size_120"
+            android:contentDescription="@string/weather_logo"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_today"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+
+            <TextView
+                android:id="@+id/tv_currentDay_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/today"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/text_size_24"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_minTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_currentDay_desc"
+                android:layout_marginEnd="@dimen/margin_6"
+                android:text="@string/low_s"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/text_size_24"/>
+
+            <TextView
+                android:id="@+id/tv_maxTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_minTemp"
+                android:layout_marginEnd="@dimen/margin_6"
+                android:text="@string/max_s"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/text_size_24"/>
+
+            <TextView
+                android:id="@+id/tv_humidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_maxTemp"
+                android:text="@string/humidity_s"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/text_size_24"/>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

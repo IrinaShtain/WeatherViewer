@@ -3,6 +3,7 @@ package com.shtainyky.weatherviewer.data.service;
 import android.util.Log;
 
 import com.github.aurae.retrofit2.LoganSquareConverterFactory;
+import com.shtainyky.weatherviewer.BuildConfig;
 import com.shtainyky.weatherviewer.WeatherApplication;
 import com.shtainyky.weatherviewer.data.ecxeptions.ConnectionException;
 import com.shtainyky.weatherviewer.data.ecxeptions.TimeoutException;
@@ -14,6 +15,7 @@ import org.androidannotations.annotations.EBean;
 import java.net.SocketTimeoutException;
 import java.util.concurrent.TimeUnit;
 
+import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import retrofit2.Retrofit;
@@ -41,12 +43,16 @@ public class Rest {
                 .writeTimeout(Constants.TIMEOUT_WRITE, TimeUnit.SECONDS)
                 .addInterceptor(chain -> {
                     try {
-                        Log.e("myLog","chain called " + chain.request().url());
+                        Log.e("myLog", "chain called " + chain.request().url());
                         if (!application.hasInternetConnection()) {
                             throw new ConnectionException();
                         } else {
-                            Request request = chain.request().newBuilder()
+                            Request request = chain.request();
+                            HttpUrl url = request.url().newBuilder()
+                                    .addQueryParameter("appid", BuildConfig.API_KEY)
+                                    .addQueryParameter("units", BuildConfig.UNITS)
                                     .build();
+                            request = request.newBuilder().url(url).build();
                             return chain.proceed(request);
                         }
                     } catch (SocketTimeoutException e) {
@@ -54,7 +60,7 @@ public class Rest {
                     }
                 });
 
-        Log.e("myLog","Rest called ");
+        Log.e("myLog", "Rest called ");
         retrofit = new Retrofit.Builder()
                 .addConverterFactory(LoganSquareConverterFactory.create())
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())

@@ -13,13 +13,9 @@ import rx.Observable;
 
 public interface WeatherService {
     @GET("/data/2.5/weather")
-    Observable<WeatherResponse> getDayWeather(@Query("APPID") String api_key,
-                                              @Query("units") String units,
-                                              @Query("lat") float lat,
+    Observable<WeatherResponse> getDayWeather(@Query("lat") float lat,
                                               @Query("lon") float lon);
     @GET("/data/2.5/forecast")
-    Observable<WeekWeatherResponse> getWeekWeather(@Query("APPID") String api_key,
-                                                  @Query("units") String units,
-                                                  @Query("lat") float lat,
+    Observable<WeekWeatherResponse> getWeekWeather(@Query("lat") float lat,
                                                   @Query("lon") float lon);
 }

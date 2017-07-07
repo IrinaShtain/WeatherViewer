@@ -34,11 +34,11 @@ public class WeatherRepository extends NetworkRepository implements TodayWeather
 
     @Override
     public Observable<WeatherResponse> getWeather(float lat, float lon) {
-        return getNetworkObservable(mWeatherService.getDayWeather(Constants.KEY_API, "metric", lat, lon));
+        return getNetworkObservable(mWeatherService.getDayWeather(lat, lon));
     }
 
     @Override
     public Observable<WeekWeatherResponse> getWeekWeather(float lat, float lon) {
-        return getNetworkObservable(mWeatherService.getWeekWeather(Constants.KEY_API, "metric", lat, lon));
+        return getNetworkObservable(mWeatherService.getWeekWeather(lat, lon));
     }
 }

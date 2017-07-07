@@ -17,5 +17,4 @@ public abstract class Constants {
 
     public static final String BASE_URL = "http://api.openweathermap.org";
     public static final String BASE_URL_IMAGE = "http://api.openweathermap.org/img/w/";
-    public static final String KEY_API = "4e24b48366bd60da4d55a6271ed9e8bf";
 }

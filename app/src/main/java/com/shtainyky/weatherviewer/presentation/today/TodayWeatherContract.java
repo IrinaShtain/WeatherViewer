@@ -3,6 +3,7 @@ package com.shtainyky.weatherviewer.presentation.today;
 import com.shtainyky.weatherviewer.data.models.response.WeatherResponse;
 import com.shtainyky.weatherviewer.presentation.base.BasePresenter;
 import com.shtainyky.weatherviewer.presentation.base.BaseView;
+import com.shtainyky.weatherviewer.presentation.base.content.ContentView;
 
 import rx.Observable;
 
@@ -12,7 +13,7 @@ import rx.Observable;
  */
 
 public class TodayWeatherContract {
-    interface TodayWeatherView extends BaseView<TodayWeatherContract.TodayWeatherPresenter> {
+    interface TodayWeatherView extends BaseView<TodayWeatherContract.TodayWeatherPresenter>, ContentView {
         void setLastKnownLocation(String address);
 
         void makeVisible();

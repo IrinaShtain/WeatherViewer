@@ -1,16 +1,16 @@
 package com.shtainyky.weatherviewer.presentation.week;
 
-import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.shtainyky.weatherviewer.R;
 import com.shtainyky.weatherviewer.domains.WeatherRepository;
 import com.shtainyky.weatherviewer.presentation.base.BaseFragment;
+import com.shtainyky.weatherviewer.presentation.base.BasePresenter;
+import com.shtainyky.weatherviewer.presentation.base.content.ContentFragment;
 import com.shtainyky.weatherviewer.presentation.location.LocationFragment_;
+import com.shtainyky.weatherviewer.presentation.week.adapter.WeatherDH;
+import com.shtainyky.weatherviewer.presentation.week.adapter.WeekWeatherAdapter;
 import com.shtainyky.weatherviewer.utils.SignedLocationManager;
 
 import org.androidannotations.annotations.AfterInject;
@@ -24,8 +24,8 @@ import java.util.ArrayList;
 /**
  * Created by Bell on 14.06.2017.
  */
-@EFragment(R.layout.fragment_week)
-public class WeekWeatherFragment extends BaseFragment implements WeekWeatherContract.WeekWeatherView {
+@EFragment
+public class WeekWeatherFragment extends ContentFragment implements WeekWeatherContract.WeekWeatherView {
 
     @ViewById
     protected RecyclerView rvLists;
@@ -37,6 +37,16 @@ public class WeekWeatherFragment extends BaseFragment implements WeekWeatherCont
     protected SignedLocationManager mLocationManager;
 
     private WeekWeatherContract.WeekWeatherPresenter mPresenter;
+
+    @Override
+    protected int getLayoutRes() {
+        return R.layout.fragment_week;
+    }
+
+    @Override
+    protected BasePresenter getPresenter() {
+        return mPresenter;
+    }
 
     @AfterInject
     @Override

@@ -1,13 +1,13 @@
 package com.shtainyky.weatherviewer.presentation.week;
 
-import com.shtainyky.weatherviewer.data.models.response.WeatherResponse;
 import com.shtainyky.weatherviewer.data.models.response.WeekWeatherResponse;
 import com.shtainyky.weatherviewer.presentation.base.BasePresenter;
 import com.shtainyky.weatherviewer.presentation.base.BaseView;
-import com.shtainyky.weatherviewer.presentation.today.TodayWeatherContract;
+import com.shtainyky.weatherviewer.presentation.base.content.ContentFragment;
+import com.shtainyky.weatherviewer.presentation.base.content.ContentView;
+import com.shtainyky.weatherviewer.presentation.week.adapter.WeatherDH;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import rx.Observable;
 
@@ -16,7 +16,7 @@ import rx.Observable;
  */
 
 public class WeekWeatherContract {
-    interface WeekWeatherView extends BaseView<WeekWeatherContract.WeekWeatherPresenter> {
+    interface WeekWeatherView extends BaseView<WeekWeatherContract.WeekWeatherPresenter>, ContentView {
          void setList(ArrayList<WeatherDH> list);
 
         void openLocationFragment();

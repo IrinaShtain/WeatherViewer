@@ -1,4 +1,4 @@
-package com.shtainyky.weatherviewer.presentation.week;
+package com.shtainyky.weatherviewer.presentation.week.adapter;
 
 import com.shtainyky.weatherviewer.data.models.DayWeatherItem;
 import com.shtainyky.weatherviewer.data.models.response.WeatherResponse;

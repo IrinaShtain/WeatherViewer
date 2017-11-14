@@ -1,4 +1,4 @@
-package com.shtainyky.weatherviewer.presentation.week;
+package com.shtainyky.weatherviewer.presentation.week.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.shtainyky.weatherviewer.R;
+import com.shtainyky.weatherviewer.presentation.week.adapter.WeatherDH;
+import com.shtainyky.weatherviewer.presentation.week.adapter.WeatherVH;
 
 import org.androidannotations.annotations.EBean;
 

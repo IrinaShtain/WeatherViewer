@@ -1,4 +1,4 @@
-package com.shtainyky.weatherviewer.presentation.week;
+package com.shtainyky.weatherviewer.presentation.week.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -7,7 +7,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.shtainyky.weatherviewer.R;
-import com.shtainyky.weatherviewer.utils.Constants;
+import com.shtainyky.weatherviewer.presentation.week.adapter.WeatherDH;
 import com.squareup.picasso.Picasso;
 
 /**

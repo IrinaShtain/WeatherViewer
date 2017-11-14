@@ -3,6 +3,7 @@ package com.shtainyky.weatherviewer.presentation;
 import android.graphics.Color;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.Toolbar;
+import android.widget.ProgressBar;
 
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;

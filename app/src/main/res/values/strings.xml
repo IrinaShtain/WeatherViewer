@@ -55,6 +55,10 @@
     <string name="validation_city">The city isn\'t defined</string>
     <string name="validation_country">The country isn\'t defined</string>
     <string name="enter_the_city">Enter the city (or use your current location) for defining the weather</string>
+    <string name="err_msg_connection_problem">Connection lost</string>
+    <string name="err_msg_something_goes_wrong">Something went wrong</string>
+    <string name="err_msg_no_data">Sorry... we have no data</string>
+    <string name="button_retry">Retry</string>
 
     <!--Week weather screen-->
 

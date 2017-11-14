@@ -6,4 +6,5 @@
 
     <color name="my_text_color">#e040fb</color>
     <color name="line_grey">#5ce040fb</color>
+    <color name="color_red">#5cfb406f</color>
 </resources>

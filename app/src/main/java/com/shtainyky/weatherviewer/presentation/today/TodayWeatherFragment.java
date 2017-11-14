@@ -1,6 +1,5 @@
 package com.shtainyky.weatherviewer.presentation.today;
 
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -9,7 +8,8 @@ import android.widget.TextView;
 import com.jakewharton.rxbinding.view.RxView;
 import com.shtainyky.weatherviewer.R;
 import com.shtainyky.weatherviewer.domains.WeatherRepository;
-import com.shtainyky.weatherviewer.presentation.base.BaseFragment;
+import com.shtainyky.weatherviewer.presentation.base.BasePresenter;
+import com.shtainyky.weatherviewer.presentation.base.content.ContentFragment;
 import com.shtainyky.weatherviewer.presentation.location.LocationFragment_;
 import com.shtainyky.weatherviewer.utils.Constants;
 import com.shtainyky.weatherviewer.utils.SignedLocationManager;
@@ -26,8 +26,8 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by Bell on 14.06.2017.
  */
-@EFragment(R.layout.fragment_today)
-public class TodayWeatherFragment extends BaseFragment implements TodayWeatherContract.TodayWeatherView {
+@EFragment
+public class TodayWeatherFragment extends ContentFragment implements TodayWeatherContract.TodayWeatherView {
 
     @ViewById
     protected ImageView iv_Weather;
@@ -57,6 +57,16 @@ public class TodayWeatherFragment extends BaseFragment implements TodayWeatherCo
     private TodayWeatherContract.TodayWeatherPresenter mWeatherPresenter;
     @Bean
     protected WeatherRepository mRepository;
+
+    @Override
+    protected int getLayoutRes() {
+        return R.layout.fragment_today;
+    }
+
+    @Override
+    protected BasePresenter getPresenter() {
+        return mWeatherPresenter;
+    }
 
     @AfterInject
     @Override

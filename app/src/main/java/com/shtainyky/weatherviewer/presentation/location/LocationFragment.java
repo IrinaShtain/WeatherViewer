@@ -327,7 +327,7 @@ public class LocationFragment extends BaseFragment implements
     public void requestPlaces() {
         try {
             Intent intent =
-                    new PlaceAutocomplete.IntentBuilder(PlaceAutocomplete.MODE_OVERLAY)
+                    new PlaceAutocomplete.IntentBuilder(PlaceAutocomplete.MODE_FULLSCREEN)
                             .setFilter(new AutocompleteFilter.Builder()
                                     .setTypeFilter(AutocompleteFilter.TYPE_FILTER_CITIES)
                                     .build())
@@ -362,6 +362,9 @@ public class LocationFragment extends BaseFragment implements
                     presenter.getAddress(place.getLatLng().latitude,
                             place.getLatLng().longitude);
                 } else if (resultCode == PlaceAutocomplete.RESULT_ERROR) {
+                    Status status = PlaceAutocomplete.getStatus(getActivity(), data);
+                    Log.i("mLog", ""+status.getStatusCode());
+
                     presenter.showMessage(getString(R.string.message_no_known_location));
                 } else if (resultCode == RESULT_CANCELED) {
                     // The user canceled the operation.

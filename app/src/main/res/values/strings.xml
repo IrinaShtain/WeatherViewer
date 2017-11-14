@@ -39,7 +39,7 @@
     <string name="location_text">Location</string>
     <string name="btn_search">Search</string>
     <string name="text_current_location">Use current location</string>
-    <string name="message_need_permission">Allow GymBud to access your location for recommendation person near you</string>
+    <string name="message_need_permission">Allow Weather Viewer to access your location for recommendation person near you</string>
     <string name="answer_grant">Allow</string>
     <string name="answer_deny">Deny</string>
     <string name="message_path_to_permissions">Go to permissions</string>
